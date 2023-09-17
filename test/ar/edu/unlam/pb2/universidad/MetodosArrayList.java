@@ -36,8 +36,16 @@ public class MetodosArrayList {
 			System.out.println("Hash: " + i.hashCode() );
 		}
 		
+		System.out.println("-------------------");
 		
-//		https://www.javatpoint.com/how-to-compare-two-objects-in-java
+		Docente docenteA = new Docente(1);
+		Docente docenteB = new Docente(1);
+		
+		System.out.println(docenteA.equals(docenteB));
+		System.out.println(docenteA.hashCode());
+		System.out.println(docenteB.hashCode());
+		
+		
 	}
 
 }

@@ -7,31 +7,20 @@ import org.junit.Test;
 
 public class DocenteTest {
 
-	@Test
-	public void crearDocente() {
-		Universidad unlam = new Universidad("unlam");
-		Integer dniDocente = 1;
-		Boolean resultadoEsperado = false;
-		
-		Docente docente= new Docente(dniDocente);
-		
-		resultadoEsperado =unlam.crearDocente(docente);
-		
-		assertTrue(resultadoEsperado);
-	}
 	
 	@Test
-	public void agregarDocenteAArrayDocentes() {
+	public void queNoExistanDosDocentesConElMismoDni() {
 		Universidad unlam = new Universidad("unlam");
 		Integer dniDocente = 1;
 		Boolean resultadoEsperado = false;
 		
-		Docente docente= new Docente(dniDocente);
+		Docente primerDocente= new Docente(dniDocente);
+		Docente segundoDocente = new Docente(dniDocente);
 		
-		unlam.crearDocente(docente);
-		resultadoEsperado =unlam.agregarDocente(docente);
+		unlam.agregarDocente(primerDocente);
+		resultadoEsperado = unlam.agregarDocente(segundoDocente);
 		
-		assertTrue(resultadoEsperado);
+		assertFalse(resultadoEsperado);
 		
 	}
 	
