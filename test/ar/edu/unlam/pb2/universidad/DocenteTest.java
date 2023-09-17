@@ -19,5 +19,22 @@ public class DocenteTest {
 		
 		assertTrue(resultadoEsperado);
 	}
+	
+	@Test
+	public void agregarDocenteAArrayDocentes() {
+		Universidad unlam = new Universidad("unlam");
+		Integer dniDocente = 1;
+		Boolean resultadoEsperado = false;
+		
+		Docente docente= new Docente(dniDocente);
+		
+		unlam.crearDocente(docente);
+		resultadoEsperado =unlam.agregarDocente(docente);
+		
+		assertTrue(resultadoEsperado);
+		
+	}
+	
+	
 
 }

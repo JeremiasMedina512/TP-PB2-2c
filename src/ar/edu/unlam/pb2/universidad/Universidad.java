@@ -112,4 +112,8 @@ public class Universidad {
 		return null;
 	}
 
+	public Boolean agregarDocente(Docente docente) {
+		return this.docentes.add(docente);
+	}
+
 }
