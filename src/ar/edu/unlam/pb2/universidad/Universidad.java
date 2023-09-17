@@ -63,7 +63,7 @@ public class Universidad {
 
 	public Boolean agregarDocente(Docente docente) {
 		if (this.docentes.size() != 0) {
-			for (int i = 0; i < this.docentes.size();i++) {
+			for (int i = 0; i < this.docentes.size(); i++) {
 				if ((this.docentes.get(i) != null) && this.docentes.get(i).equals(docente)) {
 					return false;
 				}
@@ -114,15 +114,8 @@ public class Universidad {
 			valorDeRetorno = materiaPb2.eliminarMateriaCorrelativa(materiaPb1);
 		}
 
-		System.out.println("Nueva rama");
-		System.out.println("Hello world");
 		return valorDeRetorno;
-<<<<<<< HEAD
-		
-		
-=======
 
->>>>>>> metodoCrearDocente
 	}
 
 }
