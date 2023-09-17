@@ -107,9 +107,11 @@ public class Universidad {
 			valorDeRetorno = materiaPb2.eliminarMateriaCorrelativa(materiaPb1);
 		}
 
+		System.out.println("Nueva rama");
+		System.out.println("Hello world");
 		return valorDeRetorno;
 		
-		return null;
+		
 	}
 
 }
