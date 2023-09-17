@@ -61,7 +61,14 @@ public class Universidad {
 		return this.aulas.add(aula);
 	}
 
-	public Boolean crearDocente(Docente docente) {
+	public Boolean agregarDocente(Docente docente) {
+		if (this.docentes.size() != 0) {
+			for (int i = 0; i < this.docentes.size();i++) {
+				if ((this.docentes.get(i) != null) && this.docentes.get(i).equals(docente)) {
+					return false;
+				}
+			}
+		}
 		return this.docentes.add(docente);
 	}
 
@@ -95,7 +102,7 @@ public class Universidad {
 		Materia materiaPb1 = null;
 		Materia materiaPb2 = null;
 		Boolean valorDeRetorno = false;
-		for (int i = 0; i < this.materias.size();i++) {
+		for (int i = 0; i < this.materias.size(); i++) {
 			if (this.materias.get(i).getIdMateria().equals(idMateriaCorrelativaAEliminar)) {
 				materiaPb1 = this.materias.get(i);
 			} else if (this.materias.get(i).getIdMateria().equals(idMateria)) {
@@ -110,8 +117,12 @@ public class Universidad {
 		System.out.println("Nueva rama");
 		System.out.println("Hello world");
 		return valorDeRetorno;
+<<<<<<< HEAD
 		
 		
+=======
+
+>>>>>>> metodoCrearDocente
 	}
 
 }
