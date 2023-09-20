@@ -53,9 +53,16 @@ public class Universidad {
 		return false;
 	}
 
-	public Boolean crearComision(Comision comision) {
+	public Boolean agregarComision(Comision comision) {
+		if (this.comisiones.size() != 0) {
+			for (int i = 0; i < this.comisiones.size(); i++) {
+				if (this.comisiones.get(i).equals(comision)) {
+					return false;
+				}
+			}
+		}
 		return this.comisiones.add(comision);
-	}
+	}	
 
 	public Boolean crearAula(Aula aula) {
 		return this.aulas.add(aula);

@@ -8,19 +8,25 @@ import org.junit.Test;
 public class ComisionTest {
 
 	@Test
-	public void crearComision() {
+	public void agregarComision() {
 		Integer id = 1;
 		Materia materia = new Materia();
 		CicloLectivo cicloLectivo = new CicloLectivo();
 		Turno turno = new Turno();
 		Boolean resultadoEsperado = false;
 		
-		Comision comision = new Comision(id,materia,cicloLectivo,turno);
+		Comision primeraComision = new Comision(id,materia,cicloLectivo,turno);
+		Comision segundaComision = new Comision(id,materia,cicloLectivo,turno);
 		Universidad unlam = new Universidad("Unlam");
-		resultadoEsperado =unlam.crearComision(comision);
 		
-		assertTrue(resultadoEsperado);
+		unlam.agregarComision(primeraComision);
+		resultadoEsperado = unlam.agregarComision(segundaComision);
+				
+		assertFalse(resultadoEsperado);
 
 	}
+	
+
+
 
 }

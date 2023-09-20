@@ -24,6 +24,21 @@ public class DocenteTest {
 		
 	}
 	
+	@Test
+	public void asignarDocentesAComision() {
+		Universidad unlam = new Universidad("unlam");
+		Integer dniDocente = 1;
+		Boolean resultadoEsperado = false;
+		
+		Docente primerDocente= new Docente(dniDocente);
+		
+		unlam.agregarDocente(primerDocente);
+		resultadoEsperado = unlam.agregarDocente(primerDocente);
+		
+		assertFalse(resultadoEsperado);
+		
+	}
+	
 	
 
 }
